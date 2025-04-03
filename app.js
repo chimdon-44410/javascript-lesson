@@ -19,3 +19,14 @@ let language5 = 'Go' ;
 
 let templateliterals = `私の好きな言語は${language1}です。次は${language3}を勉強してみたいです。`;
 console.log(templateliterals);
+
+//Q3
+
+let user = {
+  name: 'John',
+  age: 26,
+  bloodType: 'A',
+  favorite: 'card',
+};
+
+console.log(user.age);
