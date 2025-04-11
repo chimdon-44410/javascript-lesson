@@ -76,16 +76,16 @@ console.log(sayWorld);
 
 //Q7
 
-let user = {
-  name: 'John',
-  age: 26,
-  bloodType: 'A',
-  favorite: 'card',
-  birthday: '2000-09-27',
-  sayHello: 'Hello!'
-};
+// let user = {
+//   name: 'John',
+//   age: 26,
+//   bloodType: 'A',
+//   favorite: 'card',
+//   birthday: '2000-09-27',
+//   sayHello: 'Hello!'
+// };
 
-console.log(user.sayHello);
+// console.log(user.sayHello);
 
 
 //Q8
@@ -131,3 +131,59 @@ console.log( x + ' を ' +  y  +  ' で割った余りは' +  z  + 'です。');
 // }
 // console.log(x);
 // のxは{}の範囲内でないと変数が参照できないため範囲外にあるconsole.log(x);ではエラーが出てしまう。
+
+
+//応用
+
+//Q1
+
+let random = Math.floor(Math.random()*10);
+
+console.log(random);
+
+//Q2
+
+
+setTimeout(function() { console.log('Hello World!');}, 3000);
+
+//Q3
+let num = 3;
+
+if(num > 0){
+  console.log('num is greater than 0');
+} else if (num < 0){
+  console.log('num is less than 0');
+} else if (num = 0){
+  console.log('num is 0');
+}
+
+//Q4
+let number = 0;
+for(;;){
+
+  if(number>99)break;
+
+  console.log(number);
+  number++;
+
+}
+
+//Q5
+
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+for (let i = 0; i < mixed.length; i++) {
+  console.log(mixed[i]);
+  console.log(typeof mixed[i])
+
+//   if(mixed[i] == number && (number % 2 == 0)) {
+//     console.log('even');
+//   }
+
+//   else if(mixed[i] == number && (number % 2 == 1)) {
+//     console.log('odd');
+//   }
+
+//   else if (mixed[i] == string) {
+//     console.log('not number');
+//   }
+}
