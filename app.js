@@ -153,37 +153,40 @@ if(num > 0){
   console.log('num is greater than 0');
 } else if (num < 0){
   console.log('num is less than 0');
-} else if (num = 0){
+} else if (num === 0){
   console.log('num is 0');
 }
 
 //Q4
-let number = 0;
-for(;;){
+let numbers = []
+// for(;;)
+for(let count = 0; count < 100; count){
 
-  if(number>99)break;
+  if(numbers >99)break;
 
-  console.log(number);
-  number++;
+  console.log(numbers);
+  numbers++;
 
 }
 
 //Q5
 
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-for (let i = 0; i < mixed.length; i++) {
-  console.log(mixed[i]);
-  console.log(typeof mixed[i])
+for (let i = 0; i < mixed.length; i++) 
+  {
+    let item = mixed[i]
+  // console.log(mixed[i]);
+  // console.log(typeof mixed[i])
 
-//   if(mixed[i] == number && (number % 2 == 0)) {
-//     console.log('even');
-//   }
+  if(typeof item === 'number' && item % 2 === 0) {
+    console.log('even');
+  }
 
-//   else if(mixed[i] == number && (number % 2 == 1)) {
-//     console.log('odd');
-//   }
+  else if(typeof item == 'number' && item % 2 == 1) {
+    console.log('odd');
+  }
 
-//   else if (mixed[i] == string) {
-//     console.log('not number');
-//   }
+  else if (typeof item === 'string') {
+    console.log('not number');
+  }
 }
