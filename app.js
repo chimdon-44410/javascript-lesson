@@ -163,10 +163,8 @@ if(num > 0){
 //Q4
 let numbers = [];
 
-for(let count = 1; count< 100; count++){
+for(let count = 0; count< 100; count++){
   numbers.push(count);
-
-  if(count >99)break;
   
 }
 console.log(numbers);
