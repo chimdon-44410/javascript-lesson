@@ -52,6 +52,7 @@ console.log(bob.favorites[1]);
 
 
 //Q5
+
 let john = (playerList[0].age);
 let bob_ = (playerList[1].age);
 let michael = (playerList[2].age);
@@ -65,6 +66,7 @@ for (let i = 0; i < eachAge.length; i++) {
 }
 console.log(sum / eachAge.length);
 
+
 //Q6
 function Hello() {
   console.log('sayHello');
@@ -73,6 +75,7 @@ Hello();
 
 let sayWorld = 'World';
 console.log(sayWorld);
+
 
 //Q7
 
@@ -158,23 +161,23 @@ if(num > 0){
 }
 
 //Q4
-let numbers = []
-// for(;;)
-for(let count = 0; count < 100; count){
+let numbers = [];
 
-  if(numbers >99)break;
+for(let count = 1; count< 100; count++){
+  numbers.push(count);
 
-  console.log(numbers);
-  numbers++;
-
+  if(count >99)break;
+  
 }
+console.log(numbers);
+
 
 //Q5
 
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 for (let i = 0; i < mixed.length; i++) 
   {
-    let item = mixed[i]
+    let item = mixed[i];
   // console.log(mixed[i]);
   // console.log(typeof mixed[i])
 
@@ -182,7 +185,7 @@ for (let i = 0; i < mixed.length; i++)
     console.log('even');
   }
 
-  else if(typeof item == 'number' && item % 2 == 1) {
+  else if(typeof item === 'number' && item % 2 === 1) {
     console.log('odd');
   }
 
