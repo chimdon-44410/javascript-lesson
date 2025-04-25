@@ -4,24 +4,27 @@
 let nickname = 'ともみ';
 let age = '27歳';
 
-let selfintrodaction =
+let selfIntrodaction =
   '私のニックネームは' + nickname + 'です。 年齢は' + age + 'です。';
 
-console.log(selfintrodaction);
+console.log(selfIntrodaction);
 
 
 
 //Q2
 
 
-let language1 = 'JavaScript';
-let language2 = 'PHP';
-let language3 = 'Ruby';
-let language4 = 'Python';
-let language5 = 'Go';
+// let language1 = 'JavaScript';
+// let language2 = 'PHP';
+// let language3 = 'Ruby';
+// let language4 = 'Python';
+// let language5 = 'Go';
 
+let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+// 宿題、配列のデータ型は何か
+// →array型
 
-let templateliterals = `私の好きな言語は${language1}です。次は${language3}を勉強してみたいです。`;
+let templateliterals = `私の好きな言語は${languages[0]}です。次は${languages[2]}を勉強してみたいです。`;
 
 console.log(templateliterals);
 
@@ -36,7 +39,11 @@ let user = {
   favorite: 'card',
 };
 
-console.log(user.age);
+
+     
+// console.log(user.age);
+// オブジェクト型
+// プロパティ (key:value)の組み合わせ
 
 //Q4
 
@@ -47,9 +54,9 @@ let playerList = [
 ];
 
 let bob = playerList[1]
-console.log(bob.favorites[1]);
-
-
+// console.log(bob.favorites[1]);
+console.log(playerList[1].favorites[1]);
+// [1]:index番号
 
 //Q5
 
@@ -63,18 +70,27 @@ let sum = 0;
 
 for (let i = 0; i < eachAge.length; i++) {
   sum += eachAge[i];
+  // sum += playerList[i].age;
 }
 console.log(sum / eachAge.length);
 
+// i++
+// i=i+1
 
 //Q6
-function Hello() {
-  console.log('sayHello');
+function sayHello() {
+  console.log('Hello');
 }
-Hello();
+sayHello();
 
-let sayWorld = 'World';
-console.log(sayWorld);
+//関数は処理をまとめて名前をつけたもの
+
+// Q6 二問目宿題↓
+
+let sayWorld = function (){
+  console.log('World');
+}
+ sayWorld();
 
 
 //Q7
@@ -84,11 +100,19 @@ console.log(sayWorld);
 //   age: 26,
 //   bloodType: 'A',
 //   favorite: 'card',
-//   birthday: '2000-09-27',
-//   sayHello: 'Hello!'
-// };
+  // birthday: '2000-09-27',
+  // sayHello: function() {
+  //   console.log('Hello!');
+  // },
+// }
 
-// console.log(user.sayHello);
+// 宿題、プロパティの追加
+user.birthday = '2000-09-27';
+user.sayHello = function() {
+     console.log('Hello!');
+}
+// 終わったらpush
+user.sayHello();
 
 
 //Q8
@@ -145,9 +169,19 @@ let random = Math.floor(Math.random()*10);
 console.log(random);
 
 //Q2
-
-
+// num
 setTimeout(function() { console.log('Hello World!');}, 3000);
+// 関数とわかる理由
+// 関数と変数の違い
+// 関数は()がつく
+// 変数はつかない
+
+// メソッドと関数の見分け方
+// hhhh()
+// オブジェクトがついてるとメソッド
+// bbbb.jjj()
+// bbbb.ccc
+// ()がなかったらプロパティ
 
 //Q3
 let num = 3;
@@ -181,13 +215,27 @@ for (let i = 0; i < mixed.length; i++)
 
   if(typeof item === 'number' && item % 2 === 0) {
     console.log('even');
-  }
-
-  else if(typeof item === 'number' && item % 2 === 1) {
+  } else if (typeof item === 'number' && item % 2 === 1) {
     console.log('odd');
-  }
-
-  else if (typeof item === 'string') {
+  } else if (typeof item === 'string') {
     console.log('not number');
   }
 }
+
+// if(typeof item !== 'number') {
+//   console.log('not number');
+// } else if (item % 2 === 1) {
+//   console.log('odd');
+// } else {
+//   console.log('even');
+// }
+
+// if(typeof item === 'number') {
+//   if(item % 2 === 1) {
+//     console.log('odd');
+//   } else {
+//     console.log('even');
+//   }
+// } else {
+//   console.log('not number');
+// }}
